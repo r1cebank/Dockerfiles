@@ -17,7 +17,7 @@ RUN yum install -y npm \
  && rm -rf /usr/lib/locale \
  && rm -rf /usr/share/locale
 
-#Installing gulp
-RUN npm install -g gulp
+#Installing global package
+RUN npm install -g gulp pm2 bower mocha
 
 CMD ["/bin/bash", "--login"]
