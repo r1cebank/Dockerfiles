@@ -3,7 +3,7 @@
 # Based on baseos
 ############################################################
 
-FROM r1cebank/baseos
+FROM r1cebank/baseos:latest
 
 # File Author / Maintainer
 MAINTAINER Siyuan Gao <siyuangao@gmail.com>
@@ -18,4 +18,7 @@ ENV INSTANCE 1
 # Install app dependencies
 RUN cd /src; npm install
 
-CMD ["pm2", "/src/build", "-i", ${INSTANCE}]
+ENV NODE_ENV production
+WORKDIR /src
+
+CMD pm2 start /build -i ${INSTANCE} --no-daemon && pm2 logs
