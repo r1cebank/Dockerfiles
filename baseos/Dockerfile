@@ -19,5 +19,3 @@ RUN yum install -y npm \
 
 #Installing global package
 RUN npm install -g gulp pm2 bower mocha
-
-CMD ["/bin/bash", "--login"]
