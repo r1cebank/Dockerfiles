@@ -14,7 +14,7 @@ RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-
 RUN yum install -y npm \
  && yum install -y git \
  && yum install -y python-setuptools \
- && easy_install supervisor
+ && easy_install supervisor \
  && rm -rf /var/cache/yum \
  && rm -rf /usr/lib/locale \
  && rm -rf /usr/share/locale
