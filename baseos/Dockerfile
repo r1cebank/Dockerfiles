@@ -13,7 +13,7 @@ RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-
 # Install Node.js and npm, install app dependencies, and remove extraneous files
 RUN yum install -y npm \
  && yum install -y git \
- && yum install python-setuptools \
+ && yum install -y python-setuptools \
  && easy_install supervisor
  && rm -rf /var/cache/yum \
  && rm -rf /usr/lib/locale \
