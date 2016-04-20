@@ -3,7 +3,7 @@
 # Based on node
 ############################################################
 
-FROM node:latest
+FROM node:argon
 
 # File Author / Maintainer
 MAINTAINER Siyuan Gao <siyuangao@gmail.com>
