@@ -21,6 +21,5 @@ RUN make install
 
 EXPOSE 8081
 
-WORKDIR /app
 
 CMD ["npm", "start"]
